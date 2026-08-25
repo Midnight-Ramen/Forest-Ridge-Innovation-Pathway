@@ -130,27 +130,36 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-[var(--ridge-cream)] text-[var(--ridge-ink)]">
-      <section className="hero">
-        <nav className="topbar" aria-label="Page sections">
-          <div>
-            <p className="eyebrow">Forest Ridge School of the Sacred Heart</p>
-            <strong>Innovation & Emerging Technology Pathway</strong>
-          </div>
-          <div className="navlinks">
-            <a href="#journey">Journey</a>
-            <a href="#courses">Courses</a>
-            <a href="#alignment">Alignment</a>
-          </div>
+      <header className="site-header" aria-label="Innovation pathway header">
+        <a className="brand" href="#top" aria-label="Forest Ridge innovation pathway home">
+          <span className="brand-mark">FR</span>
+          <span>Innovation Pathway</span>
+        </a>
+        <nav aria-label="Pathway sections">
+          <a href="#journey">Journey</a>
+          <a href="#courses">Courses</a>
+          <a href="#alignment">Alignment</a>
+          <a href="#leadership">Leadership</a>
         </nav>
+      </header>
 
-        <div className="hero-grid">
+      <section className="hero" id="top">
+        <img
+          src="/assets/campus-hero.png"
+          alt="Aerial view of the Forest Ridge campus with trees, buildings, and Lake Washington in the distance"
+        />
+        <div className="hero-overlay" />
+        <div className="hero-content">
           <div className="hero-copy">
             <p className="kicker">Grades 5-12</p>
-            <h1>From technology users to technology creators.</h1>
+            <h1>
+              <span>Innovation & Emerging Technology</span>
+              <span>Pathway</span>
+            </h1>
             <p className="lede">
-              A coherent student journey that builds coding and making into
-              robotics, automation, AI, immersive media, neurotechnology, and
-              student-led innovation.
+              A coherent student journey that moves Forest Ridge students from
+              technology users to technology creators through coding, robotics,
+              automation, AI, immersive media, neurotechnology, and leadership.
             </p>
             <div className="journey-words" aria-label="Pathway sequence">
               {['Make', 'Compute', 'Engineer', 'Integrate', 'Specialize', 'Innovate', 'Lead'].map(
@@ -160,22 +169,26 @@ export default function Home() {
               )}
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className="signal-panel" aria-label="Program promise">
-            <div className="orbit">
-              <span className="ring ring-one" />
-              <span className="ring ring-two" />
-              <span className="core">FR</span>
-            </div>
-            <div>
-              <p className="panel-label">Program promise</p>
-              <h2>Every year adds complexity, independence, and purpose.</h2>
-              <p>
-                Students move from guided skill-building to choosing tools,
-                integrating systems, solving authentic problems, and leading
-                others.
-              </p>
-            </div>
+      <section className="summary-band" aria-label="Pathway summary">
+        <div className="summary-grid">
+          <div className="metric">
+            <strong>5-12</strong>
+            <span>A continuous pathway from Middle School foundations to Upper School specialization.</span>
+          </div>
+          <div className="metric">
+            <strong>7</strong>
+            <span>Make, Compute, Engineer, Integrate, Specialize, Innovate, and Lead.</span>
+          </div>
+          <div className="metric">
+            <strong>4</strong>
+            <span>Upper School innovation offerings available each year through X Blocks.</span>
+          </div>
+          <div className="metric">
+            <strong>1</strong>
+            <span>Program promise: complexity, independence, purpose, and leadership.</span>
           </div>
         </div>
       </section>
@@ -260,7 +273,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="leadership-band">
+      <section className="leadership-band" id="leadership">
         <div>
           <p className="eyebrow">Depth + leadership</p>
           <h2>Co-curricular pathways make growth visible.</h2>

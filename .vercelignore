@@ -1,0 +1,7 @@
+.git
+.next
+.vinext
+dist
+node_modules
+.wrangler
+*.tar.gz

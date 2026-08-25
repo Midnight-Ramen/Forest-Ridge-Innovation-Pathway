@@ -148,11 +148,13 @@ a:focus-visible {
 }
 
 .hero-copy h1 {
-  max-width: min(1100px, 100%);
+  max-width: min(980px, 100%);
   margin: 0 0 18px;
-  font-size: clamp(3rem, 6.8vw, 6.8rem);
-  line-height: 0.92;
+  font-size: clamp(3rem, 5.8vw, 5.9rem);
+  line-height: 0.96;
   letter-spacing: 0;
+  overflow-wrap: break-word;
+  text-wrap: balance;
 }
 
 .hero-copy h1 span {
@@ -160,7 +162,7 @@ a:focus-visible {
 }
 
 .hero-copy h1 span:first-child {
-  white-space: nowrap;
+  max-width: 100%;
 }
 
 .lede {
@@ -662,7 +664,7 @@ footer p {
   }
 
   .hero-copy h1 span:first-child {
-    white-space: normal;
+    max-width: 100%;
   }
 
   .pathway-shell {

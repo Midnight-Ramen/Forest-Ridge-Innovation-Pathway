@@ -407,6 +407,16 @@ a:focus-visible {
   line-height: 1.55;
 }
 
+.rotation-card .course-list {
+  margin-top: 12px;
+  color: var(--ridge-ink);
+  font-weight: 650;
+}
+
+.rotation-card .course-list strong {
+  color: var(--ridge-green);
+}
+
 .rotation-card div {
   display: flex;
   gap: 7px;

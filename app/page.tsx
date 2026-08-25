@@ -77,21 +77,24 @@ const rotations = [
     label: 'Annual anchor',
     title: 'Ravens Design Studio',
     detail:
-      'Design, fabrication, physical computing, rapid prototyping, and authentic client or community challenges.',
+      'Available every year as the Upper School anchor for design, fabrication, physical computing, rapid prototyping, and authentic client or community challenges.',
+    courses: ['Ravens Design Studio'],
     tags: ['3D print', 'Laser fabrication', 'Electronics', 'Human-centered design'],
   },
   {
     label: 'Rotation A',
     title: 'Applied Technology + Creative Computing',
     detail:
-      'Smart Systems & Automation, Robotics & Drone Programming, and Game Design + AR.',
+      'Applied technology options that extend Middle School foundations into responsive systems, autonomous machines, and creative digital experiences.',
+    courses: ['Smart Systems & Automation', 'Robotics & Drone Programming', 'Game Design + AR'],
     tags: ['Sensors', 'Drones', 'Automation', 'AR / VR'],
   },
   {
     label: 'Rotation B',
     title: 'Emerging + Advanced Technology',
     detail:
-      'Automation + Industrial Robotics, AI + Computer Vision, and Neurotechnology.',
+      'Advanced offerings where students investigate automated workflows, intelligent systems, data-rich sensing, and human-computer interaction.',
+    courses: ['Automation + Industrial Robotics', 'AI + Computer Vision', 'Neurotechnology'],
     tags: ['Industrial robotics', 'Model training', 'Biosignals', 'HCI'],
   },
 ];
@@ -244,6 +247,9 @@ export default function Home() {
               <span>{rotation.label}</span>
               <h3>{rotation.title}</h3>
               <p>{rotation.detail}</p>
+              <p className="course-list">
+                <strong>Courses:</strong> {rotation.courses.join(', ')}
+              </p>
               <div>
                 {rotation.tags.map((tag) => (
                   <em key={tag}>{tag}</em>

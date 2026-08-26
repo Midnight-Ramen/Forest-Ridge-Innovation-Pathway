@@ -363,6 +363,34 @@ a:focus-visible {
   line-height: 1;
 }
 
+.stage-skill {
+  margin: 0 0 10px;
+  color: var(--ridge-green) !important;
+  font-size: clamp(1rem, 1.5vw, 1.22rem);
+  font-weight: 850;
+  letter-spacing: 0;
+}
+
+.course-stack {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.course-stack span {
+  color: var(--ridge-gold);
+  font-size: 0.78rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.course-stack strong {
+  color: var(--ridge-navy);
+  font-size: clamp(1.45rem, 2.4vw, 2.35rem);
+  line-height: 1.06;
+}
+
 .stage-detail p {
   color: var(--ridge-muted);
   line-height: 1.58;

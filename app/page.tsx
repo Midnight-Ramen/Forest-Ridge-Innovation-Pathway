@@ -8,6 +8,7 @@ const stages = [
     verb: 'Make',
     identity: 'Maker & Coder',
     course: 'Digital Makers & Creative Coders',
+    courses: ['Digital Makers & Creative Coders'],
     question: 'How can I use code to make something interactive?',
     summary:
       'Students create with code, micro:bit inputs and outputs, simple prototypes, and early computational thinking.',
@@ -19,6 +20,7 @@ const stages = [
     verb: 'Compute',
     identity: 'Computational Thinker & AI Explorer',
     course: 'LEGO CS + AI',
+    courses: ['LEGO CS + AI'],
     question: 'How can computers use information to make decisions?',
     summary:
       'Students investigate data, algorithms, computational models, introductory AI, and computer vision through LEGO systems.',
@@ -30,6 +32,7 @@ const stages = [
     verb: 'Engineer',
     identity: 'Robotics Engineer',
     course: 'Robo Design Studio',
+    courses: ['Robo Design Studio'],
     question: 'How can I engineer a robot to accomplish a task?',
     summary:
       'Students design mechanisms, program autonomous behaviors, use sensors and motors, and optimize robotic systems.',
@@ -41,6 +44,7 @@ const stages = [
     verb: 'Integrate',
     identity: 'Creative Technologist & Systems Designer',
     course: 'Interactive Systems',
+    courses: ['Interactive Systems'],
     question:
       'How can I design an interactive system that responds meaningfully to people or its environment?',
     summary:
@@ -52,23 +56,35 @@ const stages = [
     grade: '9-10',
     verb: 'Explore',
     identity: 'Technology Explorer & Builder',
-    course: 'Upper School X Blocks',
+    course: 'Rotation A: Applied Technology + Creative Computing',
+    courses: [
+      'Ravens Design Studio',
+      'Smart Systems & Automation',
+      'Robotics & Drone Programming',
+      'Game Design + AR',
+    ],
     question: 'What can I do with these skills?',
     summary:
-      'Students apply foundations across robotics, automation, design, immersive media, AI, and emerging technologies.',
-    skills: ['Choice', 'Build', 'Collaborate', 'Troubleshoot', 'Document'],
-    capstone: 'Portfolio-ready demonstrations',
+      'Students apply foundations across design, automation, robotics, drones, game systems, AR, and creative computing.',
+    skills: ['Design', 'Automation', 'Robotics', 'Drones', 'Creative computing'],
+    capstone: 'Rotation A portfolio-ready demonstrations',
   },
   {
     grade: '11-12',
     verb: 'Specialize',
     identity: 'Innovator, Specialist & Leader',
-    course: 'Advanced X Blocks + independent design',
+    course: 'Rotation B: Emerging + Advanced Technology',
+    courses: [
+      'Ravens Design Studio',
+      'Automation + Industrial Robotics',
+      'AI + Computer Vision',
+      'Neurotechnology',
+    ],
     question: 'Which technologies do I want to explore deeply?',
     summary:
-      'Students select areas of interest, solve authentic problems, document increasingly sophisticated systems, and lead others.',
-    skills: ['Specialize', 'Mentor', 'Ethics', 'Capstone', 'Lead'],
-    capstone: 'Student-directed innovation and leadership',
+      'Students select advanced areas of interest, build increasingly sophisticated systems, document authentic problem solving, and lead others.',
+    skills: ['Industrial systems', 'AI + data', 'Biosensing', 'Ethics', 'Leadership'],
+    capstone: 'Rotation B student-directed innovation',
   },
 ];
 
@@ -226,8 +242,17 @@ export default function Home() {
 
           <article className="stage-detail" id="stage-detail">
             <div>
-              <p className="eyebrow">{active.course}</p>
-              <h3>{active.identity}</h3>
+              <p className="stage-skill">{active.identity}</p>
+              {active.courses.length > 1 ? (
+                <div className="course-stack" aria-label={`${active.course} courses`}>
+                  <span>{active.course}</span>
+                  {active.courses.map((course) => (
+                    <strong key={course}>{course}</strong>
+                  ))}
+                </div>
+              ) : (
+                <h3>{active.course}</h3>
+              )}
               <p className="question">{active.question}</p>
               <p>{active.summary}</p>
             </div>
